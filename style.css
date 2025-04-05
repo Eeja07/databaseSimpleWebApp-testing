@@ -1,0 +1,52 @@
+header {
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana;
+}
+.acc-settings__tittle-container {
+    width: 100%;
+    height: 30px;
+    color: white;
+    text-indent: 2%;
+    background-color: #3498db;
+    border-radius: 10px; /* Optional: This adds rounded corners */
+    margin-bottom: 1%;
+}
+.acc-settings__container {
+    width: 100%;
+    height: 500px;
+    color: white;
+    background-color: #3498db;
+    border-radius: 10px; /* Optional: This adds rounded corners */
+}
+.acc-settings__pic-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.acc-settings__pic-circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 2%;
+    background-image: url('assets/blankProfile.png');
+    background-size: cover;
+    background-position: center;
+}
+.acc-settings__pic-dropdown-content {
+    display: none;
+    margin: 1%;
+    margin-left: 0%;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 193px;
+}
+.acc-settings__pic-dropdown-content a {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-decoration: none;
+    padding:2%;
+}

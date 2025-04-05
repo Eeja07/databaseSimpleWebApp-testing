@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Database WebApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SIMPLE DATABASE WEBAPP</h1>
+        <h2>CRUD TESTING</h2>
+    </header>
+    <section class="account-settings">
+        <div class="acc-settings__tittle-container">
+            <h2 class="acc-settings__title">Account Information</h2>
+        </div>
+        <div class="acc-settings__container">
+            <div class="acc-settings__pic-container">
+                <div class="acc-settings__pic-circle"></div>
+                <div class="acc-settings__pic-actions">
+                    <button class="acc-settings__pic-upload-btn" onclick="toggleDropdownProfilePhoto()">Upload Photo</button>
+                    <div class="acc-settings__pic-dropdown-content">
+                        <a href="#">Take From Camera</a>
+                        <a href="#">Upload From Computer</a>
+                        <a href="#">Upload From Google Drive</a>
+                    </div>
+                    <button class="acc-settings__pic-delete-btn" onclick="deleteProfilePhoto()">Delete Photo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="index.js"></script>
+</body>
+</html>
