@@ -49,3 +49,21 @@ function deleteProfilePhoto() {
     // Show the alert after the background change
     alert('Profile photo deleted successfully!');
 }
+// Fetch the country code JSON from the URL
+fetch("https://gist.githubusercontent.com/anubhavshrimal/75f6183458db8c453306f93521e93d37/raw/f77e7598a8503f1f70528ae1cbf9f66755698a16/CountryCodes.json")
+    .then(response => response.json())
+    .then(data => {
+        // Get the select dropdown element
+        const countrySelect = document.getElementById('country');
+        const altcountrySelect = document.getElementById('alt-country');
+
+        // Loop through the JSON data and create an option for each country
+        data.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country.dial_code; // Use the country code as the value
+            option.textContent = `${country.name} (${country.dial_code})`; // Display country name and code
+            countrySelect.appendChild(option);
+            altcountrySelect.appendChild(option.cloneNode(true)); // Clone the option for the alternate dropdown
+        });
+    })
+    .catch(error => console.error('Error fetching country codes:', error));

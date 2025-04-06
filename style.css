@@ -14,7 +14,7 @@ header {
 }
 .acc-settings__container {
     width: 100%;
-    height: 500px;
+    height: 1000px;
     color: white;
     background-color: #3498db;
     border-radius: 10px; /* Optional: This adds rounded corners */
@@ -50,3 +50,6 @@ header {
     text-decoration: none;
     padding:2%;
 }
+.acc-settings__info-container{}
+.acc-settings__name-container{}
+.acc-settings__email-container{}

@@ -28,9 +28,58 @@
                     <button class="acc-settings__pic-delete-btn" onclick="deleteProfilePhoto()">Delete Photo</button>
                 </div>
             </div>
+            <div class="acc-settings__info-container">
+                <div class="acc-settings__name-container">
+                    <label for="first-name">First Name</label>
+                    <label for="last-name">Last Name</label><br>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+                </div>
+                <div class="acc-settings__email-container">
+                    <label for="main-email">Main Email</label>
+                    <label for="alt-email">Alternative Email(optional)</label><br>
+                    <input type="email" id="main-email" name="main-email" placeholder="example@example.com">
+                    <button type="button" onclick="">Verify</button>
+                    <input type="email" id="alt-email" name="alt-email" placeholder="example@example.com">
+                    <button type="button" onclick="">Verify</button>
+                </div>
+                <div class="acc-settings__phone-number-container">
+                    <form>
+                        <label for="phone">Phone Number</label>
+                        <label for="alt-phone">Alternative Phone Number(optional)</label><br>
+                        <select id="country" name="country">
+                            <option value="">--Select Country--</option>
+                        </select>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        <button type="button" onclick="">Verify</button>
+                        <select id="alt-country" name="alt-country">
+                            <option value="">--Select Country--</option>
+                        </select>
+                        <input type="tel" id="alt-phone" name="alt-phone" placeholder="Enter your alternative phone number">
+                        <button type="button" onclick="">Verify</button>
+                    </form>       
+                </div>
+                <div class="acc-settings__gender-birthday-container">
+                    <label for="gender">Gender</label>
+                    <label for="birthday">Birthday Date</label><br>
+                    <input type="radio" id="male" name="gender-male" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender-female" value="Female">
+                    <label for="female">Female</label>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+                <div class="acc-settings__address-container">
+                    <label for="home-address">Home Address</label><br>
+                    <input type="text" id="home-address" name="home-address" placeholder="Enter your home address"><br>
+                    <label for="work-address">Work Address(optional)</label><br>
+                    <input type="text" id="work-address" name="work-address" placeholder="Enter your work address">
+            </div>
+            <div class="acc-settings__buttons-container">
+                <button class="acc-settings__edit-btn" onclick="editInformation()">Edit</button>
+                <button class="acc-settings__update-btn" onclick="updateInformation()">Update</button>
+            </div>
         </div>
     </section>
-    
     <script src="index.js"></script>
 </body>
 </html>
