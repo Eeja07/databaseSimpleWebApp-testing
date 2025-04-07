@@ -17,16 +17,7 @@ button{
     color: black;
 }
 input[type="date"] {
-    color: black;  /* Sets text color */
-}
-
-button {
-    color: black;
-}
-
-input[type="date"] {
-    color: black;
-    /* Sets text color */
+    color: black;  
 }
 
 @media (max-width: 480px) {
