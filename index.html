@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Database WebApp</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>SIMPLE DATABASE WEBAPP</h1>
@@ -19,13 +21,20 @@
             <div class="acc-settings__pic-container">
                 <div class="acc-settings__pic-circle"></div>
                 <div class="acc-settings__pic-actions">
-                    <button class="acc-settings__pic-upload-btn" onclick="toggleDropdownProfilePhoto()">Upload Photo</button>
+                    <button class="acc-settings__pic-upload-btn" onclick="toggleDropdownProfilePhoto()">Upload
+                        Photo</button>
                     <div class="acc-settings__pic-dropdown-content">
-                        <a href="#">Take From Camera</a>
+                        <a onclick="opencam()" id="cam-open">Take From Camera</a>
                         <a href="#">Upload From Computer</a>
                         <a href="#">Upload From Google Drive</a>
                     </div>
+                    <video id="videoElement" autoplay></video>
+                    <canvas id="canvas" style="display: none;"></canvas>
                     <button class="acc-settings__pic-delete-btn" onclick="deleteProfilePhoto()">Delete Photo</button>
+                    <div class="btn-cam" >
+                        <button id="capture" onclick="capturePhoto()">Capture</button>
+                        <button id="close" onclick="closecam()">Close</button>
+                    </div>
                 </div>
             </div>
             <div class="acc-settings__info-container">
@@ -72,9 +81,10 @@
                             <select id="alt-country" name="alt-country">
                                 <option value="">--Select Country--</option>
                             </select>
-                            <input type="tel" id="alt-phone" name="alt-phone" placeholder="Enter your alternative phone number">
+                            <input type="tel" id="alt-phone" name="alt-phone"
+                                placeholder="Enter your alternative phone number">
                             <button type="button" onclick="">Verify</button>
-                        </form>       
+                        </form>
                     </div>
                 </div>
                 <div class="acc-settings__gender-birthday-container">
@@ -90,7 +100,7 @@
                                 <label for="female">Female</label>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="acc-settings__birthday">
                         <label for="birthday">Birthday Date</label>
                         <input type="date" id="birthday" name="birthday">
@@ -105,13 +115,14 @@
                         <label for="work-address">Work Address(optional)</label>
                         <input type="text" id="work-address" name="work-address" placeholder="Enter your work address">
                     </div>
+                </div>
+                <div class="acc-settings__btn-container">
+                    <button class="acc-settings__edit-btn" onclick="editInformation()">Edit</button>
+                    <button class="acc-settings__update-btn" onclick="updateInformation()">Update</button>
+                </div>
             </div>
-            <div class="acc-settings__btn-container">
-                <button class="acc-settings__edit-btn" onclick="editInformation()">Edit</button>
-                <button class="acc-settings__update-btn" onclick="updateInformation()">Update</button>
-            </div>
-        </div>
     </section>
     <script src="index.js"></script>
 </body>
+
 </html>
