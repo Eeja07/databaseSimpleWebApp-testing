@@ -13,6 +13,12 @@ header {
     color: white;
     padding: 10px 0;
 }
+button{
+    color: black;
+}
+input[type="date"] {
+    color: black;  /* Sets text color */
+}
 
 button {
     color: black;
@@ -298,6 +304,10 @@ input[type="date"] {
         align-items: flex-start;
         width: calc(50% - 3%);
         margin-right: 3%;
+    }
+    .acc-settings__birthday input {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .acc-settings__birthday input {
