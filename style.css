@@ -13,11 +13,17 @@ header {
     color: white;
     padding: 10px 0;
 }
-button{
+
+button {
     color: black;
 }
+
 input[type="date"] {
-    color: black;  
+    color: black;
+}
+
+select {
+    color: black;
 }
 
 @media (max-width: 480px) {
@@ -97,12 +103,31 @@ input[type="date"] {
     }
 
     .acc-settings__pic-actions button {
-        width: 80px;
+        width: 100px;
         height: 20px;
         border-radius: 10px;
         border: none;
         font-size: smaller;
         font-weight: bold;
+    }
+
+    .acc-settings__pic-actions video {
+        display: none;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    .btn-cam {
+        display: flex;
+        position: absolute;
+        flex-direction: row;
+        gap: 10%;
+        margin-top: 40%;
+    }
+    .btn-cam button{
+        display: none;
     }
 
     /* submain div 2 */
@@ -296,6 +321,7 @@ input[type="date"] {
         width: calc(50% - 3%);
         margin-right: 3%;
     }
+
     .acc-settings__birthday input {
         width: 100%;
         box-sizing: border-box;
