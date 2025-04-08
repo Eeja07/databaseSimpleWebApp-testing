@@ -16,14 +16,36 @@ header {
 
 button {
     color: black;
+    border: 1px solid black; 
 }
 
 input[type="date"] {
     color: black;
 }
-
+input {
+    border: 1px solid black; 
+}
 select {
     color: black;
+    border: 1px solid black; 
+}
+
+button:disabled {
+    background-color: white;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+input:disabled {
+    background-color: white;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+select:disabled {
+    background-color: white;
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 
 @media (max-width: 480px) {
@@ -106,7 +128,6 @@ select {
         width: 100px;
         height: 20px;
         border-radius: 10px;
-        border: none;
         font-size: smaller;
         font-weight: bold;
     }
@@ -126,7 +147,8 @@ select {
         gap: 10%;
         margin-top: 40%;
     }
-    .btn-cam button{
+
+    .btn-cam button {
         display: none;
     }
 
@@ -380,7 +402,6 @@ select {
         width: 100px;
         height: 20px;
         border-radius: 10px;
-        border: none;
         font-size: smaller;
         font-weight: bold;
     }
