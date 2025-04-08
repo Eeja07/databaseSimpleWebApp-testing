@@ -21,17 +21,19 @@
             <div class="acc-settings__pic-container">
                 <div class="acc-settings__pic-circle"></div>
                 <div class="acc-settings__pic-actions">
-                    <button class="acc-settings__pic-upload-btn" onclick="toggleDropdownProfilePhoto()">Upload
+                    <button class="acc-settings__pic-upload-btn" id="uploadProfilePic"
+                        onclick="toggleDropdownProfilePhoto()" disabled>Upload
                         Photo</button>
                     <div class="acc-settings__pic-dropdown-content">
                         <a onclick="opencam()" id="cam-open">Take From Camera</a>
-                        <a href="#">Upload From Computer</a>
-                        <a href="#">Upload From Google Drive</a>
+                        <a onclick= "foldercam()" id="cam-folder">Upload From Computer</a>
+                        <a onclick="drivecam()" id="cam-drive">Upload From Google Drive</a>
                     </div>
                     <video id="videoElement" autoplay></video>
                     <canvas id="canvas" style="display: none;"></canvas>
-                    <button class="acc-settings__pic-delete-btn" onclick="deleteProfilePhoto()">Delete Photo</button>
-                    <div class="btn-cam" >
+                    <button class="acc-settings__pic-delete-btn" id="deleteProfilePic" onclick="deleteProfilePhoto()"
+                        disabled>Delete Photo</button>
+                    <div class="btn-cam">
                         <button id="capture" onclick="capturePhoto()">Capture</button>
                         <button id="close" onclick="closecam()">Close</button>
                     </div>
@@ -41,25 +43,26 @@
                 <div class="acc-settings__name-container">
                     <div class="acc-settings__first-name">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name"
+                            disabled>
                     </div>
                     <div class="acc-settings__last-name">
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" disabled>
                     </div>
                 </div>
                 <div class="acc-settings__email-container">
                     <div class="acc-settings__main-email">
                         <label for="main-email">Main Email</label>
                         <div class="acc-settings__main-email-elements">
-                            <input type="email" id="main-email" name="main-email" placeholder="example@example.com">
+                            <input type="email" id="main-email" name="main-email" placeholder="example@example.com" disabled>
                             <button type="button" onclick="">Verify</button>
                         </div>
                     </div>
                     <div class="acc-settings__alt-email">
                         <label for="alt-email">Alternative Email(optional)</label>
                         <div class="acc-settings__alt-email-elements">
-                            <input type="email" id="alt-email" name="alt-email" placeholder="example@example.com">
+                            <input type="email" id="alt-email" name="alt-email" placeholder="example@example.com" disabled>
                             <button type="button" onclick="">Verify</button>
                         </div>
                     </div>
@@ -68,21 +71,21 @@
                     <div class="acc-settings__main-phone">
                         <label for="phone">Phone Number</label>
                         <form>
-                            <select id="country" name="country">
+                            <select id="country" name="country" disabled>
                                 <option value="">--Select Country--</option>
                             </select>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" disabled>
                             <button type="button" onclick="">Verify</button>
                         </form>
                     </div>
                     <div class="acc-settings__alt-phone">
                         <label for="alt-phone">Alternative Phone Number(optional)</label>
                         <form>
-                            <select id="alt-country" name="alt-country">
-                                <option value="">--Select Country--</option>
+                            <select id="alt-country" name="alt-country" disabled>
+                                <option value="">Select Country--</option>
                             </select>
                             <input type="tel" id="alt-phone" name="alt-phone"
-                                placeholder="Enter your alternative phone number">
+                                placeholder="Enter your alternative phone number" disabled>
                             <button type="button" onclick="">Verify</button>
                         </form>
                     </div>
@@ -92,33 +95,36 @@
                         <label for="gender">Gender</label>
                         <div class="acc-settings__gender-elements">
                             <div class="acc-settings__male-gender-elements">
-                                <input type="radio" id="male" name="gender" value="Male">
+                                <input type="radio" id="male" name="gender" value="Male" disabled>
                                 <label for="male">Male</label>
                             </div>
                             <div class="acc-settings__female-gender-elements">
-                                <input type="radio" id="female" name="gender" value="Female">
+                                <input type="radio" id="female" name="gender" value="Female" disabled>
                                 <label for="female">Female</label>
                             </div>
                         </div>
                     </div>
                     <div class="acc-settings__birthday">
                         <label for="birthday">Birthday Date</label>
-                        <input type="date" id="birthday" name="birthday">
+                        <input type="date" id="birthday" name="birthday" disabled>
                     </div>
                 </div>
                 <div class="acc-settings__address-container">
                     <div class="acc-settings__home-address">
                         <label for="home-address">Home Address</label>
-                        <input type="text" id="home-address" name="home-address" placeholder="Enter your home address">
+                        <input type="text" id="home-address" name="home-address" placeholder="Enter your home address"
+                            disabled>
                     </div>
                     <div class="acc-settings__work-address">
                         <label for="work-address">Work Address(optional)</label>
-                        <input type="text" id="work-address" name="work-address" placeholder="Enter your work address">
+                        <input type="text" id="work-address" name="work-address" placeholder="Enter your work address"
+                            disabled>
                     </div>
                 </div>
                 <div class="acc-settings__btn-container">
-                    <button class="acc-settings__edit-btn" onclick="editInformation()">Edit</button>
-                    <button class="acc-settings__update-btn" onclick="updateInformation()">Update</button>
+                    <button class="acc-settings__edit-btn" id="editInformation" enabled>Edit</button>
+                    <button class="acc-settings__update-btn" id="updateInformation" onclick="updateInformation()"
+                        disabled>Update</button>
                 </div>
             </div>
     </section>
