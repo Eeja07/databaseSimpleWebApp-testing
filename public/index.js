@@ -1,46 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
   let dropdownTimeout;
 
-  function toggleDropdownProfilePhoto() {
+  window.testt = function () {
     const dropdownContent = document.querySelector(
       ".acc-settings__pic-dropdown-content"
     );
+    const dropdownButton = document.querySelector(
+      ".acc-settings__pic-upload-btn"
+    );
 
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
+    if (dropdownContent && dropdownButton) {
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+
+      dropdownContent.addEventListener("mouseleave", () => {
+        dropdownTimeout = setTimeout(() => {
+          dropdownContent.style.display = "none";
+        }, 500);
+      });
+
+      dropdownContent.addEventListener("mouseenter", () => {
+        clearTimeout(dropdownTimeout);
+      });
+
+      dropdownButton.addEventListener("mouseenter", () => {
+        clearTimeout(dropdownTimeout);
+      });
     }
-  }
-
-  const dropdownContent = document.querySelector(
-    ".acc-settings__pic-dropdown-content"
-  );
-  const dropdownButton = document.querySelector(
-    ".acc-settings__pic-upload-btn"
-  );
-
-  if (dropdownContent && dropdownButton) {
-    dropdownContent.addEventListener("mouseleave", () => {
-      dropdownTimeout = setTimeout(() => {
-        dropdownContent.style.display = "none";
-      }, 500);
-    });
-
-    dropdownContent.addEventListener("mouseenter", () => {
-      clearTimeout(dropdownTimeout);
-    });
-
-    dropdownButton.addEventListener("mouseleave", () => {
-      dropdownTimeout = setTimeout(() => {
-        dropdownContent.style.display = "none";
-      }, 500);
-    });
-
-    dropdownButton.addEventListener("mouseenter", () => {
-      clearTimeout(dropdownTimeout);
-    });
-  }
+  };
 
   function deleteProfilePhoto() {
     const profilePhotoCircle = document.querySelector(
