@@ -24,19 +24,21 @@
                 <div class="acc-settings__pic-actions">
                     <button class="acc-settings__pic-upload-btn" id="uploadProfilePic" onclick="testt()" disabled>Upload Photo</button>
                     <div class="acc-settings__pic-dropdown-content">
-                        <a onclick="opencam()" id="cam-open">Take From Camera</a>
-                        <a onclick= "foldercam()" id="cam-folder">Upload From Computer</a>
-                        <a onclick="drivecam()" id="cam-drive">Upload From Google Drive</a>
+                        <a id="camOpen">Take From Camera</a>
+                        <a id="camFolder">Upload From Computer</a>
+                        <a id="camDrive">Upload From Google Drive</a>
                     </div>
-                    <video id="videoElement" autoplay></video>
+                    <div class="square-camera" id="squareCamera">
+                        <video id="videoElement" autoplay></video>
+                    </div>
                     <canvas id="canvas" style="display: none;"></canvas>
-                    <button class="acc-settings__pic-delete-btn" id="deleteProfilePic" onclick="deleteProfilePhoto()"
-                        disabled>Delete Photo</button>
+                    <button class="acc-settings__pic-delete-btn" id="deleteProfilePic" onclick="deleteProfilePhoto()" disabled>Delete Photo</button>
                     <div class="btn-cam">
-                        <button id="capture" onclick="capturePhoto()">Capture</button>
-                        <button id="close" onclick="closecam()">Close</button>
+                        <button id="captureCam">Capture</button>
+                        <button id="closeCam">Close</button>
                     </div>
                 </div>
+                
             </div>
             <div class="acc-settings__info-container">
                 <div class="acc-settings__name-container">
@@ -126,7 +128,6 @@
             </div>
             <a href="/admin.html">Go to Admin Page</a>
     </section>
-    <script src="../index.js"></script>
+    <script src="index.js"></script>
 </body>
-
 </html>

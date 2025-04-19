@@ -59,3 +59,4 @@ build/
 # // SELECT id, first_name, last_name, main_email, verify_main_email, alt_email, verify_alt_email, country_code_main, main_phone_number, verify_main_phone, country_code_alt, alt_phone_number, verify_alt_phone, gender, birthday, home_address, work_address, status_information
 # // FROM public.account_information
 # // WHERE id=13;
+

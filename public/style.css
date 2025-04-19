@@ -16,18 +16,20 @@ header {
 
 button {
     color: black;
-    border: 1px solid black; 
+    border: 1px solid black;
 }
 
 input[type="date"] {
     color: black;
 }
+
 input {
-    border: 1px solid black; 
+    border: 1px solid black;
 }
+
 select {
     color: black;
-    border: 1px solid black; 
+    border: 1px solid black;
 }
 
 button:disabled {
@@ -106,16 +108,19 @@ select:disabled {
         display: none;
         position: absolute;
         margin-top: 5%;
+        margin-left: 1.5%;
         background-color: #f9f9f9;
-        width: 23%;
+        width: 20%;
+        border: 1px solid black;
     }
+
 
     .acc-settings__pic-dropdown-content a {
         display: flex;
         flex-direction: column;
         color: black;
         text-decoration: none;
-        padding: 2%;
+        padding: 5%;
     }
 
     .acc-settings__pic-actions {
@@ -135,21 +140,35 @@ select:disabled {
     .acc-settings__pic-actions video {
         display: none;
         position: absolute;
+        margin-top: -1.5%;
+        margin-left: 16.5%;
         width: 200px;
         height: 200px;
         border-radius: 10px;
+    }
+
+    .square-camera {
+        display: none;
+        position: absolute;
+        margin-top: 5%;
+        margin-left: -25.5%;
+        width: 600px;
+        height: 250px;
+        z-index: 1;
+        background-color: #3498db;
     }
 
     .btn-cam {
         display: flex;
         position: absolute;
         flex-direction: row;
-        gap: 10%;
-        margin-top: 40%;
+        gap: 15%;
+        margin-top: 52%;
     }
 
     .btn-cam button {
         display: none;
+        z-index: 2;
     }
 
     /* submain div 2 */
