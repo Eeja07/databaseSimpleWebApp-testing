@@ -1,0 +1,61 @@
+# ============================
+# Node.js
+# ============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================
+# dotenv / environment
+# ============================
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# ============================
+# Logs
+# ============================
+logs/
+*.log
+*.log.*
+
+# ============================
+# OS Files
+# ============================
+.DS_Store
+Thumbs.db
+
+# ============================
+# Editor / IDE
+# ============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============================
+# Coverage / Build
+# ============================
+coverage/
+dist/
+build/
+
+# ============================
+# PostgreSQL (optional)
+# ============================
+*.dump
+*.sql
+
+# ============================
+# Misc
+# ============================
+*.bak
+*.tmp
+
+# // SELECT id, first_name, last_name, main_email, verify_main_email, alt_email, verify_alt_email, country_code_main, main_phone_number, verify_main_phone, country_code_alt, alt_phone_number, verify_alt_phone, gender, birthday, home_address, work_address, status_information
+# // FROM public.account_information
+# // WHERE id=13;

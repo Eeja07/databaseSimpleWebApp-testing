@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Database Admin</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    #admin-content {
+      margin: 30px;
+      overflow-x: auto; /* Enable horizontal scrolling */
+      max-width: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+      min-width: 800px; /* Ensure table has a minimum width */
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      width: 20px;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Fixed first column */
+    th:first-child, td:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DATABASE ADMIN PAGE</h1>
+  </header>
+  <div id="admin-content">
+    <!-- Table will be dynamically inserted here -->
+  </div>
+  <button id="clearDataBtn">Clear All Data</button>
+  <a href="/">Back to Home</a>
+  <script src="../admin.js"></script>
+</body>
+</html>

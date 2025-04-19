@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Database WebApp</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -16,6 +16,7 @@
     <section class="account-settings">
         <div class="acc-settings__tittle-container">
             <h2 class="acc-settings__title">Account Information</h2>
+            <button id="autoFillBtn" class="acc-settings__auto-fill-btn">Auto-fill Form</button>
         </div>
         <div class="acc-settings__container">
             <div class="acc-settings__pic-container">
@@ -41,15 +42,14 @@
                 <div class="acc-settings__name-container">
                     <div class="acc-settings__first-name">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name"
-                            disabled>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" disabled>
                     </div>
                     <div class="acc-settings__last-name">
                         <label for="last-name">Last Name</label>
                         <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" disabled>
                     </div>
                 </div>
-                <div class="acc-settings__email-container">
+            <div class="acc-settings__email-container">
                     <div class="acc-settings__main-email">
                         <label for="main-email">Main Email</label>
                         <div class="acc-settings__main-email-elements">
@@ -121,12 +121,12 @@
                 </div>
                 <div class="acc-settings__btn-container">
                     <button class="acc-settings__edit-btn" id="editInformation" enabled>Edit</button>
-                    <button class="acc-settings__update-btn" id="updateInformation" onclick="updateInformation()"
-                        disabled>Update</button>
+                    <button class="acc-settings__update-btn" id="updateInformation" enabled>Update</button>
                 </div>
             </div>
+            <a href="/admin.html">Go to Admin Page</a>
     </section>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
 </body>
 
 </html>
